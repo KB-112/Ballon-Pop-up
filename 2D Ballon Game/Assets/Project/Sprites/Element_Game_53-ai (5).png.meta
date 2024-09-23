@@ -1,0 +1,1775 @@
+fileFormatVersion: 2
+guid: 20018c6297d46544ca6383c84f015347
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_0
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1977
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68258fa756446c44ba7ec8921f42d8dd
+      internalID: 985164101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_1
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 656
+        width: 1275
+        height: 1293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82b5e907c5613542a59c8912a7f07e4
+      internalID: 257525477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_2
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 1796
+        width: 180
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e0898d430d26948a6dc379b27d09fd
+      internalID: 924251370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_3
+      rect:
+        serializedVersion: 2
+        x: 2453
+        y: 1796
+        width: 180
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf84a2eb8f5a3d4f9769b47deefd8b7
+      internalID: 142043667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_4
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 1764
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c2c0d04e9a58b4d83e89e88fcb107b
+      internalID: -1453489118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_5
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 1558
+        width: 445
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873f74e4e976f1d47af3039bf1b62964
+      internalID: -1848113206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_6
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 1595
+        width: 230
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f1c15bcf6f2a64dbbbd8257eb390fa
+      internalID: -1903989655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_7
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 1595
+        width: 230
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a0fee261ea68f40bfd92fece62bd6b
+      internalID: -138956347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_8
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 1747
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7996c51640e6a2544a7b5bb2255d766e
+      internalID: 1949420873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_9
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1550
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8973dc5887a34459f09bf7ca4b280f
+      internalID: 1584490006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_10
+      rect:
+        serializedVersion: 2
+        x: 1993
+        y: 1526
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc15f06d91888f747b978816272c624f
+      internalID: -1551556697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_11
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 1361
+        width: 227
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8236245202178147ad694e8ed1bf138
+      internalID: 287553657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_12
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 1365
+        width: 230
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f34f1c8ef415e240905ec893eaacb67
+      internalID: 1314907938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_13
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 1501
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ab7fe73a67b6c43853f6e9f4dce12c
+      internalID: -1580127963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_14
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 1271
+        width: 445
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 764b420c001cf004ab06804266a7ebeb
+      internalID: -429658009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_15
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 1329
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a3fcf89f204754eb5cbbaebf0bdc65
+      internalID: -2073974706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_16
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 1239
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb745446c77ecc4da5e13a544ff0f01
+      internalID: 491134574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_17
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 1132
+        width: 230
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec432b35186f2841ae5cc34334a049a
+      internalID: 1574306138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_18
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 1132
+        width: 229
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756a1538cd6ee78408749ca0a4ab5d57
+      internalID: 1522133125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_19
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 993
+        width: 445
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1c92d587487e847a820368eb9536e2
+      internalID: -78190854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_20
+      rect:
+        serializedVersion: 2
+        x: 2059
+        y: 1157
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea996c01f722a40488dcc16d890df48c
+      internalID: 396387041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_21
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 1107
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b9a5cd92ced174284bb42d7d9940fc
+      internalID: -601608829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_22
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 1107
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28a4e1cfe2e6154d9ad9ddd91ae401f
+      internalID: 1984215297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_23
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 902
+        width: 230
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a7ed9aa6f9fb74c9d808051aed3e76
+      internalID: 80814584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_24
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 902
+        width: 230
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b80de97e6ac31d42b9b4156a3415ca3
+      internalID: -798801477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_25
+      rect:
+        serializedVersion: 2
+        x: 2682
+        y: 1058
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e3b09721b92f14485a1f21c686190a
+      internalID: -1687855667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_26
+      rect:
+        serializedVersion: 2
+        x: 2051
+        y: 1017
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16769f2040fa11e40a4f51ffd1f26260
+      internalID: -1698288020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_27
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 960
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c51dfbdba68e35459773c99ca67cda1
+      internalID: -740334823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_28
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 713
+        width: 445
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 987f1b2063b1c6142a8ef50704e87e0a
+      internalID: 906923073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_29
+      rect:
+        serializedVersion: 2
+        x: 2059
+        y: 755
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1752df5e7eac54da6ad4f3396404fc
+      internalID: -177897769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_30
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 672
+        width: 230
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6436c954f93669445bd53fa63b3a2fe5
+      internalID: 2042958203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_31
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 672
+        width: 230
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ced369554d0fe4dbcc6d515827900b
+      internalID: -1164631800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_32
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 714
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e59c80eac1df74dadad8c8b24737dd
+      internalID: 994496269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_33
+      rect:
+        serializedVersion: 2
+        x: 2682
+        y: 681
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe0b13ef00da184dbaffc40de2b2930
+      internalID: 621105407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_34
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 623
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a661a3fdde1394e8411e872c12039e
+      internalID: -2124458403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_35
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 430
+        width: 446
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3092d4a632ab4c3468c477393a3cef27
+      internalID: 1618567977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_36
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 607
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5264d782fd67f6144b0a26806cc0dabe
+      internalID: -532492756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_37
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 607
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46cc70fa019f2c444b3e6446f605c07a
+      internalID: 205015535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_38
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 607
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd2c4141ed1e894eab9b06d5e4c750a
+      internalID: 1664924909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_39
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 441
+        width: 227
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d23b52201807cb47b060273b21591e2
+      internalID: 1497792938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_40
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 441
+        width: 229
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7223e966d5970b4e945b6efe4d6e4c5
+      internalID: -1178883112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_41
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 574
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a30cb10a4e46144a976d54b8eab32d
+      internalID: -16697193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_42
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 566
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c606e88a63053374ea75d620691b4bac
+      internalID: -552986390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_43
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 334
+        width: 446
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385a74d4ff8b9d241b02d5f944f6ae50
+      internalID: 1967543409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_44
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 377
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafbb727afc50e847803816aed5bf174
+      internalID: -1865930752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_45
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 484
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36822bde67d87d74baaa0238940eed04
+      internalID: 1327292759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_46
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 468
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46baa5017a592da44a6c6135f20d0ffd
+      internalID: 1494349112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_47
+      rect:
+        serializedVersion: 2
+        x: 2043
+        y: 443
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed994d71121f1d54e904890a84ddf976
+      internalID: -2134407895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_48
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 418
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac3891c3d7a81d4b8b8bbcb257a6fc5
+      internalID: 1730996809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_49
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 402
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d275653486698b4fa0f38eaae4ad4c7
+      internalID: -2110930570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_50
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 394
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59c3fc3805f6bc4196c74b5fce37a7a
+      internalID: -1308555020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_51
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 394
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aedc6d772b61eee469d124e057efefa6
+      internalID: -1351921221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_52
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 361
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3cc2da8ce80744b89931a075fb3680
+      internalID: 772308399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_53
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 361
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed328df64c420614f8d1d710f1dca377
+      internalID: 813218958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_54
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 361
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2314905e0acca804986f2ccca8397f71
+      internalID: -972567131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_55
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 95
+        width: 197
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1260998a3e171b842beb248f5a7e53ce
+      internalID: 768781137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_56
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 361
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95435ae2b67aeee4393d17552e3f920c
+      internalID: -1916432349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_57
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 312
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922991dc694df00469a754a2f0ea2483
+      internalID: -19011342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_58
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 136
+        width: 217
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b92c59c608ad24382a32a2079dc7db
+      internalID: 1375990441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_59
+      rect:
+        serializedVersion: 2
+        x: 2125
+        y: 120
+        width: 246
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1153afb9643ed49ba6f6758ebcf600
+      internalID: -1170874823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_60
+      rect:
+        serializedVersion: 2
+        x: 2423
+        y: 131
+        width: 235
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde3e328d7d3cf046925c4232d624c08
+      internalID: -913159384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_61
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 246
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdf445b85ee88143a6e843cc22765ab
+      internalID: 686846379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_62
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 41
+        width: 217
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08dd31aef53cde34d947cf1914c69730
+      internalID: -1384826441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_63
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 49
+        width: 217
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a042193ed113f874bac85806fddfa416
+      internalID: -1263636729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_64
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 205
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c5d0aff2528804eb1fbcca31adc02c
+      internalID: 2054658708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_65
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 57
+        width: 219
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837358e6b1ec62945b089fe1158ea432
+      internalID: -1290564869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_66
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 172
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04a8095f1818cb47a17de45ecb85a24
+      internalID: -1705200827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_67
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 107
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebb6ac33615e98438fec3f2a62d70d5
+      internalID: -1026604479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_68
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 98
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c18515baf7efea45a38ac094af0f1f8
+      internalID: 117335141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_69
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 82
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e328ea06b32f820419d472e508065817
+      internalID: -1459337528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_70
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 57
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a1dd4606c59a045ba8203fc6156dc9
+      internalID: -1120708912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_71
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 33
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496c86792fc8c234a947e98ee735be35
+      internalID: 1246103402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_72
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 57
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a001758d512df24eaa9fcf4faff8ff1
+      internalID: 223965258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Element_Game_53-ai (5)_73
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 49
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9170f40d3e8ba864aae2682eb7c73b0d
+      internalID: 120461839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Element_Game_53-ai (5)_42: -552986390
+      Element_Game_53-ai (5)_10: -1551556697
+      Element_Game_53-ai (5)_36: -532492756
+      Element_Game_53-ai (5)_37: 205015535
+      Element_Game_53-ai (5)_58: 1375990441
+      Element_Game_53-ai (5)_66: -1705200827
+      Element_Game_53-ai (5)_24: -798801477
+      Element_Game_53-ai (5)_60: -913159384
+      Element_Game_53-ai (5)_45: 1327292759
+      Element_Game_53-ai (5)_20: 396387041
+      Element_Game_53-ai (5)_17: 1574306138
+      Element_Game_53-ai (5)_35: 1618567977
+      Element_Game_53-ai (5)_13: -1580127963
+      Element_Game_53-ai (5)_1: 257525477
+      Element_Game_53-ai (5)_50: -1308555020
+      Element_Game_53-ai (5)_26: -1698288020
+      Element_Game_53-ai (5)_8: 1949420873
+      Element_Game_53-ai (5)_48: 1730996809
+      Element_Game_53-ai (5)_23: 80814584
+      Element_Game_53-ai (5)_49: -2110930570
+      Element_Game_53-ai (5)_6: -1903989655
+      Element_Game_53-ai (5)_41: -16697193
+      Element_Game_53-ai (5)_64: 2054658708
+      Element_Game_53-ai (5)_40: -1178883112
+      Element_Game_53-ai (5)_21: -601608829
+      Element_Game_53-ai (5)_56: -1916432349
+      Element_Game_53-ai (5)_29: -177897769
+      Element_Game_53-ai (5)_33: 621105407
+      Element_Game_53-ai (5)_55: 768781137
+      Element_Game_53-ai (5)_70: -1120708912
+      Element_Game_53-ai (5)_34: -2124458403
+      Element_Game_53-ai (5)_69: -1459337528
+      Element_Game_53-ai (5)_51: -1351921221
+      Element_Game_53-ai (5)_12: 1314907938
+      Element_Game_53-ai (5)_4: -1453489118
+      Element_Game_53-ai (5)_27: -740334823
+      Element_Game_53-ai (5)_63: -1263636729
+      Element_Game_53-ai (5)_25: -1687855667
+      Element_Game_53-ai (5)_59: -1170874823
+      Element_Game_53-ai (5)_44: -1865930752
+      Element_Game_53-ai (5)_62: -1384826441
+      Element_Game_53-ai (5)_73: 120461839
+      Element_Game_53-ai (5)_5: -1848113206
+      Element_Game_53-ai (5)_15: -2073974706
+      Element_Game_53-ai (5)_57: -19011342
+      Element_Game_53-ai (5)_7: -138956347
+      Element_Game_53-ai (5)_16: 491134574
+      Element_Game_53-ai (5)_18: 1522133125
+      Element_Game_53-ai (5)_32: 994496269
+      Element_Game_53-ai (5)_71: 1246103402
+      Element_Game_53-ai (5)_39: 1497792938
+      Element_Game_53-ai (5)_28: 906923073
+      Element_Game_53-ai (5)_53: 813218958
+      Element_Game_53-ai (5)_67: -1026604479
+      Element_Game_53-ai (5)_68: 117335141
+      Element_Game_53-ai (5)_38: 1664924909
+      Element_Game_53-ai (5)_9: 1584490006
+      Element_Game_53-ai (5)_3: 142043667
+      Element_Game_53-ai (5)_43: 1967543409
+      Element_Game_53-ai (5)_0: 985164101
+      Element_Game_53-ai (5)_11: 287553657
+      Element_Game_53-ai (5)_22: 1984215297
+      Element_Game_53-ai (5)_46: 1494349112
+      Element_Game_53-ai (5)_72: 223965258
+      Element_Game_53-ai (5)_31: -1164631800
+      Element_Game_53-ai (5)_52: 772308399
+      Element_Game_53-ai (5)_2: 924251370
+      Element_Game_53-ai (5)_61: 686846379
+      Element_Game_53-ai (5)_19: -78190854
+      Element_Game_53-ai (5)_54: -972567131
+      Element_Game_53-ai (5)_30: 2042958203
+      Element_Game_53-ai (5)_14: -429658009
+      Element_Game_53-ai (5)_65: -1290564869
+      Element_Game_53-ai (5)_47: -2134407895
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
