@@ -3,7 +3,7 @@ guid: 20018c6297d46544ca6383c84f015347
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -44,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -111,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -123,6 +129,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1693,83 +1700,82 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Element_Game_53-ai (5)_42: -552986390
+      Element_Game_53-ai (5)_0: 985164101
+      Element_Game_53-ai (5)_1: 257525477
       Element_Game_53-ai (5)_10: -1551556697
+      Element_Game_53-ai (5)_11: 287553657
+      Element_Game_53-ai (5)_12: 1314907938
+      Element_Game_53-ai (5)_13: -1580127963
+      Element_Game_53-ai (5)_14: -429658009
+      Element_Game_53-ai (5)_15: -2073974706
+      Element_Game_53-ai (5)_16: 491134574
+      Element_Game_53-ai (5)_17: 1574306138
+      Element_Game_53-ai (5)_18: 1522133125
+      Element_Game_53-ai (5)_19: -78190854
+      Element_Game_53-ai (5)_2: 924251370
+      Element_Game_53-ai (5)_20: 396387041
+      Element_Game_53-ai (5)_21: -601608829
+      Element_Game_53-ai (5)_22: 1984215297
+      Element_Game_53-ai (5)_23: 80814584
+      Element_Game_53-ai (5)_24: -798801477
+      Element_Game_53-ai (5)_25: -1687855667
+      Element_Game_53-ai (5)_26: -1698288020
+      Element_Game_53-ai (5)_27: -740334823
+      Element_Game_53-ai (5)_28: 906923073
+      Element_Game_53-ai (5)_29: -177897769
+      Element_Game_53-ai (5)_3: 142043667
+      Element_Game_53-ai (5)_30: 2042958203
+      Element_Game_53-ai (5)_31: -1164631800
+      Element_Game_53-ai (5)_32: 994496269
+      Element_Game_53-ai (5)_33: 621105407
+      Element_Game_53-ai (5)_34: -2124458403
+      Element_Game_53-ai (5)_35: 1618567977
       Element_Game_53-ai (5)_36: -532492756
       Element_Game_53-ai (5)_37: 205015535
-      Element_Game_53-ai (5)_58: 1375990441
-      Element_Game_53-ai (5)_66: -1705200827
-      Element_Game_53-ai (5)_24: -798801477
-      Element_Game_53-ai (5)_60: -913159384
-      Element_Game_53-ai (5)_45: 1327292759
-      Element_Game_53-ai (5)_20: 396387041
-      Element_Game_53-ai (5)_17: 1574306138
-      Element_Game_53-ai (5)_35: 1618567977
-      Element_Game_53-ai (5)_13: -1580127963
-      Element_Game_53-ai (5)_1: 257525477
-      Element_Game_53-ai (5)_50: -1308555020
-      Element_Game_53-ai (5)_26: -1698288020
-      Element_Game_53-ai (5)_8: 1949420873
-      Element_Game_53-ai (5)_48: 1730996809
-      Element_Game_53-ai (5)_23: 80814584
-      Element_Game_53-ai (5)_49: -2110930570
-      Element_Game_53-ai (5)_6: -1903989655
-      Element_Game_53-ai (5)_41: -16697193
-      Element_Game_53-ai (5)_64: 2054658708
-      Element_Game_53-ai (5)_40: -1178883112
-      Element_Game_53-ai (5)_21: -601608829
-      Element_Game_53-ai (5)_56: -1916432349
-      Element_Game_53-ai (5)_29: -177897769
-      Element_Game_53-ai (5)_33: 621105407
-      Element_Game_53-ai (5)_55: 768781137
-      Element_Game_53-ai (5)_70: -1120708912
-      Element_Game_53-ai (5)_34: -2124458403
-      Element_Game_53-ai (5)_69: -1459337528
-      Element_Game_53-ai (5)_51: -1351921221
-      Element_Game_53-ai (5)_12: 1314907938
-      Element_Game_53-ai (5)_4: -1453489118
-      Element_Game_53-ai (5)_27: -740334823
-      Element_Game_53-ai (5)_63: -1263636729
-      Element_Game_53-ai (5)_25: -1687855667
-      Element_Game_53-ai (5)_59: -1170874823
-      Element_Game_53-ai (5)_44: -1865930752
-      Element_Game_53-ai (5)_62: -1384826441
-      Element_Game_53-ai (5)_73: 120461839
-      Element_Game_53-ai (5)_5: -1848113206
-      Element_Game_53-ai (5)_15: -2073974706
-      Element_Game_53-ai (5)_57: -19011342
-      Element_Game_53-ai (5)_7: -138956347
-      Element_Game_53-ai (5)_16: 491134574
-      Element_Game_53-ai (5)_18: 1522133125
-      Element_Game_53-ai (5)_32: 994496269
-      Element_Game_53-ai (5)_71: 1246103402
+      Element_Game_53-ai (5)_38: 1664924909
       Element_Game_53-ai (5)_39: 1497792938
-      Element_Game_53-ai (5)_28: 906923073
+      Element_Game_53-ai (5)_4: -1453489118
+      Element_Game_53-ai (5)_40: -1178883112
+      Element_Game_53-ai (5)_41: -16697193
+      Element_Game_53-ai (5)_42: -552986390
+      Element_Game_53-ai (5)_43: 1967543409
+      Element_Game_53-ai (5)_44: -1865930752
+      Element_Game_53-ai (5)_45: 1327292759
+      Element_Game_53-ai (5)_46: 1494349112
+      Element_Game_53-ai (5)_47: -2134407895
+      Element_Game_53-ai (5)_48: 1730996809
+      Element_Game_53-ai (5)_49: -2110930570
+      Element_Game_53-ai (5)_5: -1848113206
+      Element_Game_53-ai (5)_50: -1308555020
+      Element_Game_53-ai (5)_51: -1351921221
+      Element_Game_53-ai (5)_52: 772308399
       Element_Game_53-ai (5)_53: 813218958
+      Element_Game_53-ai (5)_54: -972567131
+      Element_Game_53-ai (5)_55: 768781137
+      Element_Game_53-ai (5)_56: -1916432349
+      Element_Game_53-ai (5)_57: -19011342
+      Element_Game_53-ai (5)_58: 1375990441
+      Element_Game_53-ai (5)_59: -1170874823
+      Element_Game_53-ai (5)_6: -1903989655
+      Element_Game_53-ai (5)_60: -913159384
+      Element_Game_53-ai (5)_61: 686846379
+      Element_Game_53-ai (5)_62: -1384826441
+      Element_Game_53-ai (5)_63: -1263636729
+      Element_Game_53-ai (5)_64: 2054658708
+      Element_Game_53-ai (5)_65: -1290564869
+      Element_Game_53-ai (5)_66: -1705200827
       Element_Game_53-ai (5)_67: -1026604479
       Element_Game_53-ai (5)_68: 117335141
-      Element_Game_53-ai (5)_38: 1664924909
-      Element_Game_53-ai (5)_9: 1584490006
-      Element_Game_53-ai (5)_3: 142043667
-      Element_Game_53-ai (5)_43: 1967543409
-      Element_Game_53-ai (5)_0: 985164101
-      Element_Game_53-ai (5)_11: 287553657
-      Element_Game_53-ai (5)_22: 1984215297
-      Element_Game_53-ai (5)_46: 1494349112
+      Element_Game_53-ai (5)_69: -1459337528
+      Element_Game_53-ai (5)_7: -138956347
+      Element_Game_53-ai (5)_70: -1120708912
+      Element_Game_53-ai (5)_71: 1246103402
       Element_Game_53-ai (5)_72: 223965258
-      Element_Game_53-ai (5)_31: -1164631800
-      Element_Game_53-ai (5)_52: 772308399
-      Element_Game_53-ai (5)_2: 924251370
-      Element_Game_53-ai (5)_61: 686846379
-      Element_Game_53-ai (5)_19: -78190854
-      Element_Game_53-ai (5)_54: -972567131
-      Element_Game_53-ai (5)_30: 2042958203
-      Element_Game_53-ai (5)_14: -429658009
-      Element_Game_53-ai (5)_65: -1290564869
-      Element_Game_53-ai (5)_47: -2134407895
-  spritePackingTag: 
+      Element_Game_53-ai (5)_73: 120461839
+      Element_Game_53-ai (5)_8: 1949420873
+      Element_Game_53-ai (5)_9: 1584490006
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
