@@ -1,12 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System.Collections;
 
 public class BalloonManager : MonoBehaviour
 {
     public static BalloonManager Instance { get; private set; }
     public List<BalloonConfig> balloonConfigs; // Public to set in Inspector
-    public Transform balloonPrefab;
+    public GameObject balloonPrefab; // Prefab for the balloon
+    public List<GameObject> pooledObjects;
+
+    public int amountToPool;
+  
 
     private void Awake()
     {
@@ -15,64 +20,52 @@ public class BalloonManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject); // Keeps this manager across scenes
+          
         }
         else
         {
             Destroy(gameObject);
         }
+        InitializeBalllon();
     }
 
-    // Method to instantiate balloons based on a configuration and return the instantiated GameObject
-    public GameObject InstantiateBalloons(BalloonConfig config)
-    {
-        List<GameObject> balloonInstances = new List<GameObject>();
-
-        for (int i = 0; i < config.balloonCount; i++)
-        {
-            Transform balloonInstance = Instantiate(balloonPrefab, config.path[0].position, Quaternion.identity);
-            SpriteRenderer spriteRenderer = balloonInstance.GetComponent<SpriteRenderer>();
-            ChangeSprite(spriteRenderer, config.sprites); // Change the sprite before starting the movement
-            PathMovementPattern(balloonInstance, config); // Move the balloon along the path
-
-            // Add to the list of instantiated balloons
-            balloonInstances.Add(balloonInstance.gameObject);
-        }
-
-        // Optionally return the last balloon instantiated or any specific logic to return
-        return balloonInstances.Count > 0 ? balloonInstances[0] : null;
-    }
-
-    // Select balloon configuration based on score
- public BalloonConfig GetBalloonConfigBasedOnScore(int score)
+  public void InitializeBalllon()
 {
-    // Logic to determine which balloon config to return based on the score
-    // For example:
-    if (score < 500)
-    {
-        return balloonConfigs.Find(config => config.type == BalloonType.SlowBalloon);
-    }
-    else if (score < 1000)
-    {
-        return balloonConfigs.Find(config => config.type == BalloonType.FastBalloon);
-    }
-    else
-    {
-        return balloonConfigs.Find(config => config.type == BalloonType.DangerBalloon);
-    }
+   
+        for (int i = 0; i < amountToPool; i++)
+        {
+            GameObject newBallon = Instantiate(balloonPrefab); 
+            newBallon.SetActive(false); 
+            pooledObjects.Add(newBallon); 
+        }
+    
 }
 
 
-    private void ChangeSprite(SpriteRenderer spriteRenderer, List<Sprite> sprites)
+
+
+public List<GameObject> GetPooledObject()
+{
+   
+    return pooledObjects;
+}
+  
+    
+
+    // Method to change the balloon's sprite
+    public void ChangeSprite(SpriteRenderer spriteRenderer, List<Sprite> sprites)
     {
-        if (sprites.Count > 0)
-        {
-            int randomSpriteIndex = Random.Range(0, sprites.Count);
-            spriteRenderer.sprite = sprites[randomSpriteIndex]; // Assign a random sprite
-        }
+        if (sprites == null || sprites.Count == 0) return; // Handle empty sprite list
+
+        int randomSpriteIndex = Random.Range(0, sprites.Count);
+        spriteRenderer.sprite = sprites[randomSpriteIndex]; // Assign a random sprite
     }
 
-    private void PathMovementPattern(Transform balloonInstance, BalloonConfig config)
+    // Path movement for the balloon
+    public void PathMovementPattern(Transform balloonInstance, BalloonConfig config)
     {
+        if (config.path == null || config.path.Count == 0) return; // Ensure the path is valid
+
         Vector3[] positions = new Vector3[config.path.Count];
 
         for (int posIndex = 0; posIndex < config.path.Count; posIndex++)
@@ -83,7 +76,7 @@ public class BalloonManager : MonoBehaviour
             // Randomize last position more widely
             if (posIndex == config.path.Count - 1)
             {
-                randomizeX = Random.Range(-5f, 5f);
+                randomizeX = Random.Range(-1f, 8f);
             }
 
             Vector3 randomizedPosition = new Vector3(item.position.x + randomizeX, item.position.y, item.position.z);
@@ -99,8 +92,8 @@ public class BalloonManager : MonoBehaviour
     // Reset balloon position to the start position
     private void ResetBalloonPosition(Transform balloonInstance, Vector3 startPosition)
     {
-        balloonInstance.position = startPosition; // Reset position
-        balloonInstance.gameObject.SetActive(false); // Optionally deactivate for pooling
+        balloonInstance.position = startPosition;
+        balloonInstance.gameObject.SetActive(false); // Deactivate for pooling
     }
 }
 

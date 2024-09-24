@@ -878,7 +878,6 @@ GameObject:
   m_Component:
   - component: {fileID: 578710517}
   - component: {fileID: 578710518}
-  - component: {fileID: 578710519}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -932,18 +931,6 @@ MonoBehaviour:
     - {fileID: 1718859426}
     settingButtonPanel:
     - {fileID: 2010394994}
---- !u!114 &578710519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 578710516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e15795145bc88b4ba91f87a01161d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &695337459
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,7 +971,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695337459}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -1418,7 +1405,7 @@ GameObject:
   - component: {fileID: 1112074983}
   - component: {fileID: 1112074984}
   m_Layer: 0
-  m_Name: BallonCOntroller
+  m_Name: BallonController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1451,7 +1438,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05788b760f44ff348b6cf1c6d20c43b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPool: []
+  objectPooled: []
+  listContianers: []
 --- !u!114 &1112074983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1467,7 +1455,7 @@ MonoBehaviour:
   balloonConfigs:
   - type: 0
     balloonCount: 3
-    duration: 10
+    duration: 8
     pathType: 0
     pathMode: 2
     sprites:
@@ -1485,7 +1473,64 @@ MonoBehaviour:
     - {fileID: 1598155872}
     loopCount: 0
     loopType: 0
-  balloonPrefab: {fileID: 3907113010850916274, guid: 1ead6b7739d21ae479343e95eb609c8b, type: 3}
+  - type: 2
+    balloonCount: 5
+    duration: 20
+    pathType: 1
+    pathMode: 3
+    sprites:
+    - {fileID: 21300000, guid: e12773e7151a8e8489193a5350c697a9, type: 3}
+    path:
+    - {fileID: 878772568}
+    - {fileID: 1386182182}
+    - {fileID: 492916131}
+    - {fileID: 959913710}
+    - {fileID: 1598155872}
+    loopCount: 0
+    loopType: 0
+  - type: 1
+    balloonCount: 7
+    duration: 7
+    pathType: 0
+    pathMode: 2
+    sprites:
+    - {fileID: 21300000, guid: be25f4c08d4e6ea4e92221f3a374031e, type: 3}
+    - {fileID: 21300000, guid: 8c22fef2f596d5d42b13da8fa0f8b7be, type: 3}
+    - {fileID: 21300000, guid: 3f2ce9e4998c8944e9428aa1b1921534, type: 3}
+    - {fileID: 21300000, guid: cef4afdcd0088d74b8e7e8fd532f13bb, type: 3}
+    - {fileID: 21300000, guid: 271f2fb48ae88b448bd985733096c667, type: 3}
+    - {fileID: 21300000, guid: 433937bfabd2414428a7e3be25019fc2, type: 3}
+    path:
+    - {fileID: 878772568}
+    - {fileID: 1386182182}
+    - {fileID: 492916131}
+    - {fileID: 959913710}
+    - {fileID: 1598155872}
+    loopCount: 0
+    loopType: 0
+  - type: 3
+    balloonCount: 7
+    duration: 6
+    pathType: 0
+    pathMode: 2
+    sprites:
+    - {fileID: 21300000, guid: be25f4c08d4e6ea4e92221f3a374031e, type: 3}
+    - {fileID: 21300000, guid: 8c22fef2f596d5d42b13da8fa0f8b7be, type: 3}
+    - {fileID: 21300000, guid: 3f2ce9e4998c8944e9428aa1b1921534, type: 3}
+    - {fileID: 21300000, guid: cef4afdcd0088d74b8e7e8fd532f13bb, type: 3}
+    - {fileID: 21300000, guid: 271f2fb48ae88b448bd985733096c667, type: 3}
+    - {fileID: 21300000, guid: 433937bfabd2414428a7e3be25019fc2, type: 3}
+    path:
+    - {fileID: 878772568}
+    - {fileID: 1386182182}
+    - {fileID: 492916131}
+    - {fileID: 959913710}
+    - {fileID: 1598155872}
+    loopCount: 0
+    loopType: 0
+  balloonPrefab: {fileID: 1127239768471003242, guid: 8acac3d8cda7236409ffbef60c3a8f08, type: 3}
+  pooledObjects: []
+  amountToPool: 18
 --- !u!114 &1112074984
 MonoBehaviour:
   m_ObjectHideFlags: 0
