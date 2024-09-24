@@ -1,27 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using TMPro; // Import TextMeshPro namespace
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance { get; private set; }
     private int score;
 
-    // Reference to the TextMeshProUGUI components
     [SerializeField]
-    private TMP_Text scoreText; // Drag and drop your TMP Text component in the inspector
-    [SerializeField]
-    private TMP_Text timerText; // Drag and drop your Timer Text component in the inspector
+    private TMP_Text scoreText;
 
-    private float timer; // Timer in seconds
-    private bool isTimerRunning;
+    public LayerMask playerLayer; // Layer for the regular balloons
+    public LayerMask redBalloonLayer; // Layer for the red balloons
+    public GameObject balloonPrefab;
 
-    private void Awake()
+    void Awake()
     {
-        // Ensure only one instance of ScoreManager exists
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Keep this manager across scenes
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -29,73 +28,66 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    void Start()
     {
-        score = 0; // Initialize score
-        timer = 45f; // Set the timer to 45 seconds
-        isTimerRunning = true; // Start the timer
-        UpdateScoreText(); // Update the score text on start
-        UpdateTimerText(); // Update the timer text on start
+        score = 0;
+        UpdateScoreText();
+
+        Vector2 pos = new Vector2(0, Random.Range(0, 4));
+       
     }
 
-    private void Update()
+    void Update()
     {
-        // Update the timer if it's running
-        if (isTimerRunning)
+        Cast();  // Check for touch inputs
+    }
+
+    void Cast()
+    {
+        for (int i = 0; i < Input.touchCount; ++i)
         {
-            timer -= Time.deltaTime; // Decrease timer
-            if (timer <= 0)
+            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);
+
+            if (Input.GetTouch(i).phase == TouchPhase.Stationary)
             {
-                timer = 0; // Clamp timer to zero
-                isTimerRunning = false; // Stop the timer
-                OnTimerEnd(); // Call method when timer ends
+                RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero, Mathf.Infinity, playerLayer | redBalloonLayer);
+
+                if (hit.collider != null)
+                {
+                    if (hit.collider.gameObject.layer == LayerMask.NameToLayer("RedBalloon"))
+                    {
+                        hit.collider.gameObject.SetActive(false);  // Deactivate red balloon
+                        ReduceScore();  // Reduce score by 100
+                    }
+                    else if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Balloon"))
+                    {
+                        hit.collider.gameObject.SetActive(false);  // Deactivate regular balloon
+                        AddScore();  // Add 100 points
+                    }
+                }
             }
-            UpdateTimerText(); // Update the timer display
         }
     }
 
-    public void AddScore(BalloonType balloonType)
+    void AddScore()
     {
-        switch (balloonType)
-        {
-            case BalloonType.SlowBalloon:
-                score += 100; // Increase score for hitting a Slow Balloon
-                break;
-            case BalloonType.FastBalloon:
-                score += 200; // Increase score for hitting a Fast Balloon
-                break;
-            case BalloonType.DangerBalloon:
-                score -= 500; // Decrease score for hitting a Danger Balloon
-                break;
-            case BalloonType.ComboBalloon:
-                // Define logic for Combo Balloon if needed
-                break;
-            default:
-                break;
-        }
-
-        UpdateScoreText(); // Update the text after score change
+        score += 100;
+        UpdateScoreText();
         Debug.Log("Score Updated: " + score);
     }
 
-    public void MissBalloon()
+    void ReduceScore()
     {
-        score -= 50; // Penalty for missing a balloon
-        UpdateScoreText(); // Update the text after penalty
-        Debug.Log("Score Updated: " + score);
+        score -= 100;
+        UpdateScoreText();
+        Debug.Log("Score Reduced: " + score);
     }
 
-    public int GetScore()
-    {
-        return score; // Return the current score
-    }
-
-    // Method to update the TMP text with the current score
-    private void UpdateScoreText()
+    void UpdateScoreText()
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + score; // Set the TMP text to show the current score
+            scoreText.text = "Score: " + score;
         }
         else
         {
@@ -103,24 +95,8 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    // Method to update the TMP text with the current timer
-    private void UpdateTimerText()
+    public int GetScore()
     {
-        if (timerText != null)
-        {
-            timerText.text = "Time: " + Mathf.Ceil(timer).ToString(); // Display the remaining time
-        }
-        else
-        {
-            Debug.LogWarning("Timer Text TMP component is not assigned!");
-        }
-    }
-
-    // Method to call when the timer reaches zero
-    private void OnTimerEnd()
-    {
-        // Logic for when the timer ends (e.g., end game, show final score, etc.)
-        Debug.Log("Time's up! Final Score: " + score);
-        // You can trigger any end game logic here
+        return score;
     }
 }

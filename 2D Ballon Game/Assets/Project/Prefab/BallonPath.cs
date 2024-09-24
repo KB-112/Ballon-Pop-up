@@ -35,31 +35,29 @@ public class BalloonPath : MonoBehaviour
     {
         for (int j = 0; j < BalloonManager.Instance.balloonConfigs[i].balloonCount; j++)
         {
-            objectPooled[j + store].SetActive(true); // Use the store value to ensure correct index
+            // Reuse objects if we exceed the length of the pool
+            int currentIndex = (j + store) % objectPooled.Count; // Modulo ensures we loop back to the start if we exceed objectPooled length
+
+            objectPooled[currentIndex].SetActive(true); // Activate the pooled object
 
             // Apply movement pattern and change sprite for the current balloon
-            BalloonManager.Instance.PathMovementPattern(objectPooled[j + store].transform, BalloonManager.Instance.balloonConfigs[i]);
-            BalloonManager.Instance.ChangeSprite(objectPooled[j + store].GetComponent<SpriteRenderer>(), BalloonManager.Instance.balloonConfigs[i].sprites);
+            BalloonManager.Instance.PathMovementPattern(objectPooled[currentIndex].transform, BalloonManager.Instance.balloonConfigs[i]);
+            BalloonManager.Instance.ChangeSprite(objectPooled[currentIndex].GetComponent<SpriteRenderer>(), BalloonManager.Instance.balloonConfigs[i].sprites);
+        
+         yield return new WaitForSeconds(1.5f);
+        
         }
 
         // Update the store value with the total number of pooled objects processed so far
         store += BalloonManager.Instance.balloonConfigs[i].balloonCount;
-        if(store>=objectPooled.Count)
-                   {
-                    store=0;
-                   }
 
-        // Wait before proceeding to the next configuration
-      // Check if the duration is 10, and wait for half the time, otherwise wait for the full duration
-float waitTime = (BalloonManager.Instance.balloonConfigs[i].duration >= 10) 
-                 ? BalloonManager.Instance.balloonConfigs[i].duration -3 
-                 : BalloonManager.Instance.balloonConfigs[i].duration;
+      
 
-// Wait for the specified amount of time
-yield return new WaitForSeconds(waitTime);
-
+        // Wait for the specified amount of time
+        yield return new WaitForSeconds(BalloonManager.Instance.balloonConfigs[i].duration/2);
     }
 }
+
 
     
 

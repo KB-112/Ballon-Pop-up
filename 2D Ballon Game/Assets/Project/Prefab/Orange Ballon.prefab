@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5340680300478309147}
   - component: {fileID: 4716971525390356456}
   - component: {fileID: 9186650854233414088}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Orange Ballon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -71,12 +71,12 @@ public List<GameObject> GetPooledObject()
         for (int posIndex = 0; posIndex < config.path.Count; posIndex++)
         {
             Transform item = config.path[posIndex];
-            float randomizeX = Random.Range(-2f, 2f);
+            float randomizeX = Random.Range(0, 4f);
 
             // Randomize last position more widely
-            if (posIndex == config.path.Count - 1)
+            if (posIndex == 4 )
             {
-                randomizeX = Random.Range(-1f, 8f);
+                randomizeX = Random.Range(0f, 8f);
             }
 
             Vector3 randomizedPosition = new Vector3(item.position.x + randomizeX, item.position.y, item.position.z);
@@ -84,9 +84,11 @@ public List<GameObject> GetPooledObject()
         }
 
         // Move the balloon instance along the path and set the OnKill event to reset the balloon
-        balloonInstance.DOPath(positions, config.duration, config.pathType, config.pathMode, 10, Color.green)
-                       .SetLoops(config.loopCount, config.loopType)
-                       .OnKill(() => ResetBalloonPosition(balloonInstance, config.path[0].position)); // Reset position on complete
+      balloonInstance.DOPath(positions, config.duration, config.pathType, config.pathMode, 10, Color.green)
+               .SetEase(Ease.Linear) // Ensures constant speed
+               .SetLoops(config.loopCount, config.loopType)
+               .OnKill(() => ResetBalloonPosition(balloonInstance, config.path[0].position)); // Reset position on complete
+
     }
 
     // Reset balloon position to the start position
