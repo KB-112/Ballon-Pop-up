@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI; // Make sure to add this for using the Image component
 using TMPro;
 
 public class GameOver : MonoBehaviour
@@ -9,6 +10,7 @@ public class GameOver : MonoBehaviour
     public int maxHits = 3;
 
     [SerializeField] private TMP_Text timerText;
+    [SerializeField] private Image sliderImage; // Add this line for the image slider
     private float timer = 45f;
     private bool isTimerRunning = true;
     private int zeroScoreCount = 0;
@@ -22,6 +24,7 @@ public class GameOver : MonoBehaviour
     {
         gameOverBoard.SetActive(false);
         UpdateTimerText();
+        UpdateSlider(); // Initialize the slider
     }
 
     void Update()
@@ -46,6 +49,9 @@ public class GameOver : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Balloon"))
         {
             hitCount++;
+
+            // Update slider image based on hits
+            UpdateSlider();
 
             if (hitCount >= maxHits)
             {
@@ -76,6 +82,17 @@ public class GameOver : MonoBehaviour
         gameOverBoard.SetActive(true);
         Time.timeScale = 0;
         audioSource.Play();
+          hitCount = 0;
+        isTimerRunning = true;
+        timer = 45f;
+        zeroScoreCount = 0;
+
+        // Reset slider
+        if (sliderImage != null)
+        {
+            sliderImage.fillAmount = 0f;
+        }
+        
 
         // Trigger the game over event
         OnGameOver?.Invoke();
@@ -97,5 +114,18 @@ public class GameOver : MonoBehaviour
     {
         Debug.Log("Time's up! Game Over!");
         GameOverBoard();
+    }
+
+    void UpdateSlider()
+    {
+        if (sliderImage != null)
+        {
+            float fillAmount = (float)hitCount / maxHits;
+            sliderImage.fillAmount = fillAmount;
+        }
+        else
+        {
+            Debug.LogWarning("Slider Image component is not assigned!");
+        }
     }
 }

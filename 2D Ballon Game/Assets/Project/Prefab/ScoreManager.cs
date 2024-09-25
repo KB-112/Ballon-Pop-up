@@ -96,7 +96,7 @@ public class ScoreManager : MonoBehaviour
         // Ensure the score does not go below zero
         if (score > 0)
         {
-            score -= 100;
+            score -= 200;
             if (score < 0)
             {
                 score = 0; // Ensure the score stays at zero if it goes negative

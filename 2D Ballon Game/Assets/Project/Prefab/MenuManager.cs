@@ -44,56 +44,108 @@ public class MenuManager : MonoBehaviour
 [System.Serializable]
 public class SceneLoadingManager
 {
-   
     [SerializeField] public Button playBtn;
     [SerializeField] public Button quitBtn;
     [SerializeField] public Button musicBtn;
     [SerializeField] public Button settingBtn;
     [SerializeField] public Button resumeBtn;
     [SerializeField] public Button restartBtn;
-    [SerializeField] public Button homeBtn;
     [SerializeField] public Button closePanelBtn;
 
+      [SerializeField] public Button closeGameOverPanelBtn;
+     
+
+ [SerializeField] public Button closeInfoPanelBtn;
+ [SerializeField] public Button openInfoPanelBtn;
     [SerializeField] public AudioSource soundManager;
     [SerializeField] public List<GameObject> nextScenePanel;
     [SerializeField] public List<GameObject> menuPanel;
     [SerializeField] public List<GameObject> settingButtonPanel;
 
     public GameObject ballonController;
-         public static event Action OnGamePause;
+
+    public static event Action OnGamePause;
+    public static event Action OnGameResume;
+    public static event Action OnPressPlayBtn;
+
+    public GameObject closeGameOverPanel;
+     public GameObject closeInfoPanel;
 
     public void Init()
     {
-        // Assign button listeners
-        Init(false);
         ButtonExecution();
     }
 
     private void ButtonExecution()
     {
         if (playBtn != null)
-            playBtn.onClick.AddListener(() => { Debug.Log("Play button clicked."); Init(true); });
+            playBtn.onClick.AddListener(() => {
+                Debug.Log("Play button clicked.");
+                Init(true);
+                OnPressPlayBtn?.Invoke();  // Ensure play button triggers the event here
+            });
 
         if (quitBtn != null)
             quitBtn.onClick.AddListener(QuitGame);
 
         if (musicBtn != null)
-            musicBtn.onClick.AddListener(() => { Debug.Log("Music button clicked."); SoundManager(); });
+            musicBtn.onClick.AddListener(() => {
+                Debug.Log("Music button clicked.");
+                SoundManager();
+            });
 
         if (settingBtn != null)
-            settingBtn.onClick.AddListener(() => { Debug.Log("Settings button clicked."); SettingPanel(true); });
+            settingBtn.onClick.AddListener(() => {
+                Debug.Log("Settings button clicked.");
+                SettingPanel(true);
+            });
 
         if (resumeBtn != null)
-            resumeBtn.onClick.AddListener(() => { Debug.Log("Resume button clicked."); SettingPanel(false); });
+            resumeBtn.onClick.AddListener(() => {
+                Debug.Log("Resume button clicked.");
+                OnGameResume?.Invoke();
+                SettingPanel(false);
+            });
 
         if (restartBtn != null)
-            restartBtn.onClick.AddListener(() => { Debug.Log("Restart button clicked."); RestartCurrentScene(); });
-
-        if (homeBtn != null)
-            homeBtn.onClick.AddListener(() => { Debug.Log("Main Menu button clicked."); RestartCurrentScene(); });
+            restartBtn.onClick.AddListener(() => {
+                Debug.Log("Restart button clicked.");
+                Init(false);  // Restart game, reset everything
+                SettingPanel(false);
+            });
 
         if (closePanelBtn != null)
-            closePanelBtn.onClick.AddListener(() => { Debug.Log("Close Panel button clicked."); SettingPanel(false); });
+            closePanelBtn.onClick.AddListener(() => {
+                Debug.Log("Close Panel button clicked.");
+                SettingPanel(false);
+            });
+
+
+            if (closeGameOverPanelBtn != null)
+            closeGameOverPanelBtn.onClick.AddListener(() => {
+                Debug.Log("Close Panel button clicked.");
+                  Init(false);  // Restart game, reset everything
+                SettingPanel(false);
+                closeGameOverPanel.SetActive(false);
+                 soundManager.UnPause();
+            });
+
+              if (closeInfoPanelBtn != null)
+            closeInfoPanelBtn.onClick.AddListener(() => {
+                Debug.Log("Close Panel button clicked.");
+                InfoPanel(false);
+                 soundManager.UnPause();
+            });
+
+
+              if (openInfoPanelBtn != null)
+            openInfoPanelBtn.onClick.AddListener(() => {
+                
+                  InfoPanel(true);
+            });
+
+
+
     }
 
     private void QuitGame()
@@ -102,28 +154,28 @@ public class SceneLoadingManager
         Application.Quit();
     }
 
-   private void SoundManager()
-{
-    if (soundManager.isPlaying)
+    private void SoundManager()
     {
-        // Stop the music
-        soundManager.Pause();
+        if (soundManager.isPlaying)
+        {
+            // Stop the music
+            soundManager.Pause();
+        }
+        else
+        {
+            // Play the music
+            soundManager.UnPause();
+        }
     }
-    else
-    {
-        // Play the music
-        soundManager.UnPause();
-    }
-}
 
-public AudioSource AudioSource()
-{
-    return soundManager;
-}
-   
+    public AudioSource GetAudioSource()
+    {
+        return soundManager;
+    }
 
     private void Init(bool state)
     {
+        // Toggle next scene and menu panels based on the state
         foreach (var item in nextScenePanel)
         {
             item.SetActive(state);
@@ -131,36 +183,35 @@ public AudioSource AudioSource()
         foreach (var item in menuPanel)
         {
             item.SetActive(!state);
-          
         }
-          ballonController.SetActive(state);
+
+        // Enable or disable the balloon controller
+        ballonController.SetActive(state);
+
+        // Trigger the OnPressPlayBtn event when the play button is pressed
+        if (state)
+        {
+            OnPressPlayBtn?.Invoke();  // Ensure event is triggered after UI is updated
+        }
     }
 
     private void SettingPanel(bool state)
     {
+        // Toggle the visibility of setting buttons
         foreach (var item in settingButtonPanel)
         {
             item.SetActive(state);
         }
 
-        if(state)
+        // Pause or resume the game
+        Time.timeScale = state ? 0 : 1;
+
+        // Optionally invoke game pause event when settings are shown
+        if (state)
         {
-            Time.timeScale=0;
-        }
-        else
-        {
-            Time.timeScale=1;
+            OnGamePause?.Invoke();
         }
     }
-
-    private void RestartCurrentScene()
-    {
-        // Reloading the current active scene
-        OnGamePause?.Invoke();
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.buildIndex);
-    }
-
 
     public void GameOverSoundControl()
     {
@@ -169,5 +220,11 @@ public AudioSource AudioSource()
             soundManager.Pause();
             Debug.Log("Music paused due to Game Over.");
         }
+    }
+
+    public void InfoPanel(bool state)
+    {
+        closeInfoPanel.SetActive(state);
+
     }
 }
