@@ -10,6 +10,38 @@ public class BalloonPath : MonoBehaviour
     
     private bool isInitialSetupComplete = false;
     private int currentScore = 0; // Example score variable; adjust as needed
+   private void Awake()
+    {
+
+        // Subscribe to game over event
+        GameOver.OnGameOver += ClearPool;
+        SceneLoadingManager.OnGamePause +=ClearPool;
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe from the event when the object is destroyed
+        GameOver.OnGameOver -= ClearPool;
+        SceneLoadingManager.OnGamePause -=ClearPool;
+    }
+
+
+
+
+
+
+
+
+
+public void ClearPool()
+{
+    objectPooled.Clear();
+    objectRedBalloonPooled.Clear();
+    BalloonManager.Instance.amountToPool=0;
+    BalloonManager.Instance.pooledObjects.Clear();
+    Debug.Log("Pool clear");
+
+}
 
     void Start()
     {

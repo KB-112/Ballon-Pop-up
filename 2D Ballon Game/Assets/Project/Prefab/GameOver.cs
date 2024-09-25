@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 
@@ -9,12 +8,15 @@ public class GameOver : MonoBehaviour
     public int hitCount = 0;
     public int maxHits = 3;
 
-    [SerializeField]
-    private TMP_Text timerText;
-
+    [SerializeField] private TMP_Text timerText;
     private float timer = 45f;
     private bool isTimerRunning = true;
-    private int zeroScoreCount = 0; // Track how many times the score has been zero
+    private int zeroScoreCount = 0;
+
+    public AudioSource audioSource;
+
+    // Define an event to notify when the game is over
+    public static event Action OnGameOver;
 
     void Start()
     {
@@ -36,7 +38,7 @@ public class GameOver : MonoBehaviour
             UpdateTimerText();
         }
 
-        CheckScoreZero(); // Check the score in the update loop
+        CheckScoreZero();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -65,7 +67,7 @@ public class GameOver : MonoBehaviour
         }
         else
         {
-            zeroScoreCount = 0; // Reset zero score count if score is not zero
+            zeroScoreCount = 0;
         }
     }
 
@@ -73,13 +75,17 @@ public class GameOver : MonoBehaviour
     {
         gameOverBoard.SetActive(true);
         Time.timeScale = 0;
+        audioSource.Play();
+
+        // Trigger the game over event
+        OnGameOver?.Invoke();
     }
 
     private void UpdateTimerText()
     {
         if (timerText != null)
         {
-            timerText.text = "Time: " + Mathf.Ceil(timer).ToString();
+            timerText.text = "" + Mathf.Ceil(timer).ToString();
         }
         else
         {

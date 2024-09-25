@@ -16,14 +16,18 @@ public class ScoreManager : MonoBehaviour
 
     private bool isTouchActive = false; // Track if a touch is currently being processed
 
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     public int updateScore;
+    public TMP_Text finalScore;
 
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+           
         }
         else
         {
@@ -67,6 +71,7 @@ public class ScoreManager : MonoBehaviour
                         hit.collider.gameObject.SetActive(false);  // Deactivate regular balloon
                         AddScore();  // Add 100 points
                     }
+                    audioSource.PlayOneShot(audioClip);
 
                     isTouchActive = true; // Mark that a touch has been processed
                 }
@@ -107,6 +112,7 @@ public class ScoreManager : MonoBehaviour
         {
             scoreText.text = "Score: " + score;
             updateScore =score;
+            finalScore.text=""+score;
         }
         else
         {

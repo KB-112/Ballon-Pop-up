@@ -2,13 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class MenuManager : MonoBehaviour
 {    [SerializeField] private SceneLoadingManager sceneLoadingManager;
+      
 
-    private void Awake()
+
+
+     private void Awake()
     {
-        
         if (sceneLoadingManager != null)
         {
             sceneLoadingManager.Init();
@@ -16,6 +19,24 @@ public class MenuManager : MonoBehaviour
         else
         {
             Debug.LogError("SceneLoadingManager is not assigned!");
+        }
+
+        // Subscribe to game over event
+        GameOver.OnGameOver += HandleGameOver;
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe from the event when the object is destroyed
+        GameOver.OnGameOver -= HandleGameOver;
+    }
+
+    // This will be called when the game over event is triggered
+    private void HandleGameOver()
+    {
+        if (sceneLoadingManager != null)
+        {
+            sceneLoadingManager.GameOverSoundControl();
         }
     }
 }
@@ -33,10 +54,13 @@ public class SceneLoadingManager
     [SerializeField] public Button homeBtn;
     [SerializeField] public Button closePanelBtn;
 
-    [SerializeField] public GameObject soundManager;
+    [SerializeField] public AudioSource soundManager;
     [SerializeField] public List<GameObject> nextScenePanel;
     [SerializeField] public List<GameObject> menuPanel;
     [SerializeField] public List<GameObject> settingButtonPanel;
+
+    public GameObject ballonController;
+         public static event Action OnGamePause;
 
     public void Init()
     {
@@ -54,7 +78,7 @@ public class SceneLoadingManager
             quitBtn.onClick.AddListener(QuitGame);
 
         if (musicBtn != null)
-            musicBtn.onClick.AddListener(() => { Debug.Log("Music button clicked."); SoundManager(false); });
+            musicBtn.onClick.AddListener(() => { Debug.Log("Music button clicked."); SoundManager(); });
 
         if (settingBtn != null)
             settingBtn.onClick.AddListener(() => { Debug.Log("Settings button clicked."); SettingPanel(true); });
@@ -66,7 +90,7 @@ public class SceneLoadingManager
             restartBtn.onClick.AddListener(() => { Debug.Log("Restart button clicked."); RestartCurrentScene(); });
 
         if (homeBtn != null)
-            homeBtn.onClick.AddListener(() => { Debug.Log("Main Menu button clicked."); Init(false);SettingPanel(false); });
+            homeBtn.onClick.AddListener(() => { Debug.Log("Main Menu button clicked."); RestartCurrentScene(); });
 
         if (closePanelBtn != null)
             closePanelBtn.onClick.AddListener(() => { Debug.Log("Close Panel button clicked."); SettingPanel(false); });
@@ -78,13 +102,25 @@ public class SceneLoadingManager
         Application.Quit();
     }
 
-    private void SoundManager(bool state)
+   private void SoundManager()
+{
+    if (soundManager.isPlaying)
     {
-        if (soundManager != null)
-            soundManager.SetActive(state);
-        else
-            Debug.LogError("SoundManager is not assigned!");
+        // Stop the music
+        soundManager.Pause();
     }
+    else
+    {
+        // Play the music
+        soundManager.UnPause();
+    }
+}
+
+public AudioSource AudioSource()
+{
+    return soundManager;
+}
+   
 
     private void Init(bool state)
     {
@@ -95,7 +131,9 @@ public class SceneLoadingManager
         foreach (var item in menuPanel)
         {
             item.SetActive(!state);
+          
         }
+          ballonController.SetActive(state);
     }
 
     private void SettingPanel(bool state)
@@ -104,12 +142,32 @@ public class SceneLoadingManager
         {
             item.SetActive(state);
         }
+
+        if(state)
+        {
+            Time.timeScale=0;
+        }
+        else
+        {
+            Time.timeScale=1;
+        }
     }
 
     private void RestartCurrentScene()
     {
         // Reloading the current active scene
+        OnGamePause?.Invoke();
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.buildIndex);
+    }
+
+
+    public void GameOverSoundControl()
+    {
+        if (soundManager != null && soundManager.isPlaying)
+        {
+            soundManager.Pause();
+            Debug.Log("Music paused due to Game Over.");
+        }
     }
 }

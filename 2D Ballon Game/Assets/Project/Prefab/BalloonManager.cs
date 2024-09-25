@@ -19,7 +19,7 @@ public class BalloonManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Keeps this manager across scenes
+          
           
         }
         else

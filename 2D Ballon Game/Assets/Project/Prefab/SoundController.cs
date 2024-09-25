@@ -12,7 +12,6 @@ public class SoundController : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(this);
         additionalAudioSources = new List<AudioSource>();
         lastSceneName = ""; // Initialize the last scene name
     }
@@ -35,14 +34,18 @@ public class SoundController : MonoBehaviour
 
     void RecheckState(string currentSceneName)
     {
-        if (lastSceneName == currentSceneName)
+        if (lastSceneName == currentSceneName && !audioSource.isPlaying)
         {
-            // If the previous scene is the same as the current scene, return early
-            return;
+            // If it's the same scene and audio is not playing, replay it.
+            Init(currentSceneName); 
         }
-        
-        Init(currentSceneName); // Initialize for the new scene
-        lastSceneName = currentSceneName; // Update last scene name
+        else if (lastSceneName != currentSceneName)
+        {
+            // If it's a different scene, initialize for the new scene
+            Init(currentSceneName);
+        }
+
+        lastSceneName = currentSceneName; // Update the last scene name
     }
 
     void Start()
