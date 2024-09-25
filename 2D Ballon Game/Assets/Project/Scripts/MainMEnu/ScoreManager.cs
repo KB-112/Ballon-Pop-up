@@ -33,6 +33,7 @@ public class ScoreManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+            SceneLoadingManager.OnPressPlayBtn+= RestartGame;
     }
 
     void Start()
@@ -104,6 +105,19 @@ public class ScoreManager : MonoBehaviour
             UpdateScoreText();
             Debug.Log("Score Reduced: " + score);
         }
+    }
+
+
+  
+
+    private void OnDestroy()
+    {
+       SceneLoadingManager.OnPressPlayBtn -= RestartGame;
+    }
+
+    void  RestartGame()
+    {
+        score =100;
     }
 
     void UpdateScoreText()

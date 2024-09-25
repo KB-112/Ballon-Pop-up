@@ -1509,9 +1509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eeebab21a8987e4f8eff963438b2be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioIdentifications:
-  - audioClip: {fileID: 8300000, guid: 7b0240b5a285eae48bce32603448055b, type: 3}
-    sceneName: MainGame
+  audioClips:
+  - {fileID: 8300000, guid: 7b0240b5a285eae48bce32603448055b, type: 3}
   audioSource: {fileID: 695337461}
 --- !u!1 &730887748
 GameObject:
@@ -1934,7 +1933,8 @@ Transform:
   m_LocalPosition: {x: -1.3033108, y: 5.668418, z: -0.026211333}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1861354209}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1112074982
@@ -4542,11 +4542,11 @@ Transform:
   m_GameObject: {fileID: 1861354208}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.40264595, y: 3.5, z: 0.058068845}
+  m_LocalPosition: {x: 0.9006648, y: -2.168418, z: 0.08428018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1112074981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1861354210
 BoxCollider2D:
@@ -5688,4 +5688,3 @@ SceneRoots:
   - {fileID: 578710517}
   - {fileID: 1658911658}
   - {fileID: 316294502}
-  - {fileID: 1861354209}

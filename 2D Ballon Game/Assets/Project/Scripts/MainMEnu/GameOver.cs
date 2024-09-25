@@ -98,6 +98,19 @@ public class GameOver : MonoBehaviour
         OnGameOver?.Invoke();
     }
 
+
+    void Reset()
+    {
+       
+       
+       
+          hitCount = 0;
+        isTimerRunning = true;
+        timer = 45f;
+        zeroScoreCount = 0;
+
+    }
+
     private void UpdateTimerText()
     {
         if (timerText != null)
@@ -108,6 +121,20 @@ public class GameOver : MonoBehaviour
         {
             Debug.LogWarning("Timer Text TMP component is not assigned!");
         }
+    }
+
+
+ void Awake()
+    {
+        
+            SceneLoadingManager.OnPressPlayBtn += Reset;
+    }
+
+
+    void OnDestroy()
+    {
+            SceneLoadingManager.OnPressPlayBtn -= Reset;
+
     }
 
     private void OnTimerEnd()
