@@ -8,7 +8,7 @@ public class BalloonManager : MonoBehaviour
     public static BalloonManager Instance { get; private set; }
     public List<BalloonConfig> balloonConfigs; // Public to set in Inspector
     public GameObject balloonPrefab; // Prefab for the balloon
-    public List<GameObject> pooledObjects;
+   [HideInInspector] public List<GameObject> pooledObjects;
 
     public int amountToPool;
   
@@ -26,20 +26,38 @@ public class BalloonManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        InitializeBalllon();
+      InitializeBalloon();
     }
 
-  public void InitializeBalllon()
-{
-   
+ public void InitializeBalloon()
+    {
+        pooledObjects = new List<GameObject>();
+
         for (int i = 0; i < amountToPool; i++)
         {
-            GameObject newBallon = Instantiate(balloonPrefab); 
-            newBallon.SetActive(false); 
-            pooledObjects.Add(newBallon); 
+            GameObject newBalloon = Instantiate(balloonPrefab);
+            newBalloon.SetActive(false);
+
+          
+           
+
+            pooledObjects.Add(newBalloon);
         }
-    
-}
+    }
+
+    public void AssignLayer(GameObject balloon, int configIndex)
+    {
+        // Extract the layer index from the LayerMask
+        int layerIndex = Mathf.FloorToInt(Mathf.Log(balloonConfigs[configIndex].layer.value, 2));
+        balloon.layer = layerIndex;
+    }
+
+
+
+
+
+
+
 
 
 
@@ -92,7 +110,7 @@ public List<GameObject> GetPooledObject()
     }
 
     // Reset balloon position to the start position
-    private void ResetBalloonPosition(Transform balloonInstance, Vector3 startPosition)
+    public void ResetBalloonPosition(Transform balloonInstance, Vector3 startPosition)
     {
         balloonInstance.position = startPosition;
         balloonInstance.gameObject.SetActive(false); // Deactivate for pooling
@@ -112,6 +130,7 @@ public enum BalloonType
 [System.Serializable]
 public class BalloonConfig
 {
+    public LayerMask layer;
     public BalloonType type; // Type of the balloon
     public int balloonCount; // Number of balloons to instantiate
     public float duration; // Duration for the path movement

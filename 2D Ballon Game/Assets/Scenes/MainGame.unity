@@ -1765,7 +1765,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPooled: []
-  listContianers: []
+  objectRedBalloonPooled: []
+  listContainers: []
 --- !u!114 &1112074983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1779,7 +1780,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balloonConfigs:
-  - type: 0
+  - layer:
+      serializedVersion: 2
+      m_Bits: 8
+    type: 0
     balloonCount: 3
     duration: 8
     pathType: 0
@@ -1798,7 +1802,10 @@ MonoBehaviour:
     - {fileID: 959913710}
     loopCount: 0
     loopType: 0
-  - type: 3
+  - layer:
+      serializedVersion: 2
+      m_Bits: 8
+    type: 3
     balloonCount: 7
     duration: 15
     pathType: 0
@@ -1817,7 +1824,10 @@ MonoBehaviour:
     - {fileID: 959913710}
     loopCount: 0
     loopType: 0
-  - type: 1
+  - layer:
+      serializedVersion: 2
+      m_Bits: 8
+    type: 1
     balloonCount: 7
     duration: 7
     pathType: 0
@@ -1836,9 +1846,26 @@ MonoBehaviour:
     - {fileID: 959913710}
     loopCount: 0
     loopType: 0
+  - layer:
+      serializedVersion: 2
+      m_Bits: 64
+    type: 2
+    balloonCount: 7
+    duration: 7
+    pathType: 0
+    pathMode: 2
+    sprites:
+    - {fileID: 21300000, guid: e12773e7151a8e8489193a5350c697a9, type: 3}
+    path:
+    - {fileID: 878772568}
+    - {fileID: 1386182182}
+    - {fileID: 492916131}
+    - {fileID: 959913710}
+    loopCount: 0
+    loopType: 0
   balloonPrefab: {fileID: 1127239768471003242, guid: 8acac3d8cda7236409ffbef60c3a8f08, type: 3}
   pooledObjects: []
-  amountToPool: 18
+  amountToPool: 20
 --- !u!1 &1123488912
 GameObject:
   m_ObjectHideFlags: 0
@@ -3026,6 +3053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee7f9c833340834ba3c8be3c16426f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   scoreText: {fileID: 730887750}
   playerLayer:
     serializedVersion: 2
@@ -3033,7 +3061,7 @@ MonoBehaviour:
   redBalloonLayer:
     serializedVersion: 2
     m_Bits: 64
-  balloonPrefab: {fileID: 1127239768471003242, guid: 8acac3d8cda7236409ffbef60c3a8f08, type: 3}
+  updateScore: 0
 --- !u!4 &1658911658
 Transform:
   m_ObjectHideFlags: 0

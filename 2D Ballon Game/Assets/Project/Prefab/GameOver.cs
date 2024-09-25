@@ -14,6 +14,7 @@ public class GameOver : MonoBehaviour
 
     private float timer = 45f;
     private bool isTimerRunning = true;
+    private int zeroScoreCount = 0; // Track how many times the score has been zero
 
     void Start()
     {
@@ -34,6 +35,8 @@ public class GameOver : MonoBehaviour
             }
             UpdateTimerText();
         }
+
+        CheckScoreZero(); // Check the score in the update loop
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -46,6 +49,23 @@ public class GameOver : MonoBehaviour
             {
                 GameOverBoard();
             }
+        }
+    }
+
+    void CheckScoreZero()
+    {
+        if (ScoreManager.Instance.updateScore == 0)
+        {
+            zeroScoreCount++;
+
+            if (zeroScoreCount >= 3)
+            {
+                GameOverBoard();
+            }
+        }
+        else
+        {
+            zeroScoreCount = 0; // Reset zero score count if score is not zero
         }
     }
 

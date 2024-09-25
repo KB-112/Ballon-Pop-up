@@ -6,14 +6,17 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance { get; private set; }
-    private int score;
+    public int score;
 
     [SerializeField]
     private TMP_Text scoreText;
 
     public LayerMask playerLayer; // Layer for the regular balloons
     public LayerMask redBalloonLayer; // Layer for the red balloons
-    public GameObject balloonPrefab;
+
+    private bool isTouchActive = false; // Track if a touch is currently being processed
+
+    public int updateScore;
 
     void Awake()
     {
@@ -30,11 +33,8 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        score = 0;
+        score = 100;
         UpdateScoreText();
-
-        Vector2 pos = new Vector2(0, Random.Range(0, 4));
-       
     }
 
     void Update()
@@ -44,12 +44,15 @@ public class ScoreManager : MonoBehaviour
 
     void Cast()
     {
-        for (int i = 0; i < Input.touchCount; ++i)
+        // Check for touch input
+        if (Input.touchCount > 0)
         {
-            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);
+            Touch touch = Input.GetTouch(0); // Process the first touch only
 
-            if (Input.GetTouch(i).phase == TouchPhase.Stationary)
+            if (touch.phase == TouchPhase.Began) // Only process the touch when it starts
             {
+                Vector2 worldPoint = Camera.main.ScreenToWorldPoint(touch.position);
+
                 RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero, Mathf.Infinity, playerLayer | redBalloonLayer);
 
                 if (hit.collider != null)
@@ -64,8 +67,15 @@ public class ScoreManager : MonoBehaviour
                         hit.collider.gameObject.SetActive(false);  // Deactivate regular balloon
                         AddScore();  // Add 100 points
                     }
+
+                    isTouchActive = true; // Mark that a touch has been processed
                 }
             }
+        }
+        else
+        {
+            // No touch input, reset touch active status
+            isTouchActive = false;
         }
     }
 
@@ -78,9 +88,17 @@ public class ScoreManager : MonoBehaviour
 
     void ReduceScore()
     {
-        score -= 100;
-        UpdateScoreText();
-        Debug.Log("Score Reduced: " + score);
+        // Ensure the score does not go below zero
+        if (score > 0)
+        {
+            score -= 100;
+            if (score < 0)
+            {
+                score = 0; // Ensure the score stays at zero if it goes negative
+            }
+            UpdateScoreText();
+            Debug.Log("Score Reduced: " + score);
+        }
     }
 
     void UpdateScoreText()
@@ -88,6 +106,7 @@ public class ScoreManager : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = "Score: " + score;
+            updateScore =score;
         }
         else
         {
