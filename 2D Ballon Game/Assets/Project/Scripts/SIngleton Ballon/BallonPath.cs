@@ -4,17 +4,17 @@ using System.Collections;
 
 public class BalloonPath : MonoBehaviour
 {
-    public List<GameObject> objectPooled;
-    public List<GameObject> objectRedBalloonPooled;
-    public List<ListContainer> listContainers = new List<ListContainer>();
+    public List<GameObject> objectPooled; // Pool of regular balloon objects
+    public List<GameObject> objectRedBalloonPooled; // Pool of red balloon objects
+    public List<ListContainer> listContainers = new List<ListContainer>(); // Containers for balloon configurations
 
-    private bool isInitialSetupComplete = false;
-    private bool isPaused = false;
-    private int currentScore = 0; // Example score variable; adjust as needed
+    private bool isInitialSetupComplete = false; // Flag to check if the initial setup is complete
+    private bool isPaused = false; // Flag to check if the game is paused
+    private int currentScore = 0; // Current score; used for determining wait time
 
     private void Awake()
     {
-        // Subscribe to game over and pause 
+        // Subscribe to relevant game events
         SceneLoadingManager.OnPressPlayBtn += StartPopingBallon;
         GameOver.OnGameOver += ResetAllBalloons;
         SceneLoadingManager.OnGamePause += HandlePause;
@@ -23,7 +23,7 @@ public class BalloonPath : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Unsubscribe from the events when the object is destroyed
+        // Unsubscribe from events when the object is destroyed
         SceneLoadingManager.OnPressPlayBtn -= StartPopingBallon;
         GameOver.OnGameOver -= ResetAllBalloons;
         SceneLoadingManager.OnGamePause -= HandlePause;
@@ -32,6 +32,7 @@ public class BalloonPath : MonoBehaviour
 
     private void Start()
     {
+        // Initialize balloon pools and configurations
         objectPooled = BalloonManager.Instance.GetPooledObject();
         SplitPooledObjects();
         InitializeListContainers();
@@ -41,6 +42,7 @@ public class BalloonPath : MonoBehaviour
 
     public void StartPopingBallon()
     {
+        // Start balloon spawning process and reset balloons
         StartCoroutine(InitializePool());
         ResetAllBalloons();
         Debug.Log("Play Btn Pressed");
@@ -48,6 +50,7 @@ public class BalloonPath : MonoBehaviour
 
     private void Update()
     {
+        // Handle inactive balloons when the game is paused
         if (Time.timeScale == 0 && !isPaused)
         {
             HandleInactiveBalloons();
@@ -56,6 +59,7 @@ public class BalloonPath : MonoBehaviour
 
     void SplitPooledObjects()
     {
+        // Split the pool into regular and red balloon pools
         int totalObjects = objectPooled.Count;
         int splitIndex = Mathf.Min(totalObjects, 10);
 
@@ -64,11 +68,12 @@ public class BalloonPath : MonoBehaviour
         {
             objectRedBalloonPooled.Add(objectPooled[i]);
         }
-        objectPooled = objectPooled.GetRange(0, splitIndex); // First 10 objects for regular balloons
+        objectPooled = objectPooled.GetRange(0, splitIndex); // First 10 objects are for regular balloons
     }
 
     void HandleInactiveBalloons()
     {
+        // Reset inactive balloons in both pools
         for (int i = 0; i < 4; i++)
         {
             ResetInactiveBalloons(objectPooled, i);
@@ -78,6 +83,7 @@ public class BalloonPath : MonoBehaviour
 
     void ResetInactiveBalloons(List<GameObject> balloonPool, int configIndex)
     {
+        // Deactivate and reset position of inactive balloons
         foreach (var balloon in balloonPool)
         {
             if (balloon.activeInHierarchy)
@@ -90,6 +96,7 @@ public class BalloonPath : MonoBehaviour
 
     void InitializeListContainers()
     {
+        // Initialize list containers based on the number of balloon configurations
         int balloonConfigCount = BalloonManager.Instance.balloonConfigs.Count;
         listContainers = new List<ListContainer>(balloonConfigCount);
 
@@ -101,6 +108,7 @@ public class BalloonPath : MonoBehaviour
 
     IEnumerator InitializePool()
     {
+        // Initialize balloon pool spawning for regular and red balloons
         if (objectPooled.Count > 0)
         {
             StartCoroutine(BalloonCall(objectPooled, 0, 3));
@@ -116,6 +124,7 @@ public class BalloonPath : MonoBehaviour
 
     IEnumerator BalloonCall(List<GameObject> objectPool, int minConfig, int maxConfig)
     {
+        // Spawn balloons from the pool based on configurations
         if (objectPool == null || objectPool.Count == 0)
             yield break;
 
@@ -167,12 +176,14 @@ public class BalloonPath : MonoBehaviour
 
     float GetWaitTimeBasedOnScore()
     {
+        // Determine the wait time based on the current score
         currentScore = ScoreManager.Instance.updateScore;
         return currentScore > 500 ? 5f : 12f;
     }
 
     void CategorizeBalloons()
     {
+        // Categorize balloons into list containers based on configurations
         while (listContainers.Count < BalloonManager.Instance.balloonConfigs.Count)
         {
             listContainers.Add(new ListContainer());
@@ -199,6 +210,7 @@ public class BalloonPath : MonoBehaviour
 
     public void ResetAllBalloons()
     {
+        // Reset all balloons in the pools
         ResetBalloonPool(objectPooled);
         ResetBalloonPool(objectRedBalloonPooled);
 
@@ -208,6 +220,7 @@ public class BalloonPath : MonoBehaviour
 
     void ResetBalloonPool(List<GameObject> balloonPool)
     {
+        // Deactivate and reset all balloons in the specified pool
         foreach (var balloon in balloonPool)
         {
             balloon.SetActive(false);
@@ -217,15 +230,15 @@ public class BalloonPath : MonoBehaviour
 
     void HandlePause()
     {
+        // Handle game pause logic for balloons
         isPaused = true;
-        // Pause logic for balloons
         HandleInactiveBalloons();
     }
 
     void HandleResume()
     {
+        // Handle game resume logic for balloons
         isPaused = false;
-        // Resume logic for balloons
         StartCoroutine(InitializePool());
     }
 }
@@ -233,6 +246,6 @@ public class BalloonPath : MonoBehaviour
 [System.Serializable]
 public class ListContainer
 {
-    public List<GameObject> balloonObjects = new List<GameObject>();
-    public BalloonType balloonType;
+    public List<GameObject> balloonObjects = new List<GameObject>(); // List of balloon objects
+    public BalloonType balloonType; // Type of balloons in this container
 }
